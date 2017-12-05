@@ -1,32 +1,44 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+Docker-composeを使ってRails環境を構築してみました。
 
 * Ruby version
 2.4.0
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
 * ...
 
 
-
 ## Usage 
+
+※dockerがない場合は下記URLからインストール
+https://docs.docker.com/docker-for-mac/install/
+僕はstableの方をインストールしてます。
+
+インストール後バージョンを確認
+```
+$ docker
+Docker version 17.09.0-ce, build afdb6d4
+
+$ docker-compose -v
+docker-compose version 1.16.1, build 6d1ac21
+```
+
+#### dockerがインストールできたら、このプロジェクトをクローンする
+```
+$ git clone git@github.com:RyunosukeOguri/docker-rails.git
+```
+
+#### mysqlのパスワード設定ファイルをコピー
+```
+$ cp dokcer/mysql/password.yml.sample dokcer/mysql/password.yml 
+```
+dokcer/mysql/password.yml
+```
+version: '2'
+services:
+  password:
+    environment:
+      MYSQL_ROOT_PASSWORD: password //これがmysqlのパスワードになります。
+```
 
 #### サーバーを起動(rails,mysql)
 ```
