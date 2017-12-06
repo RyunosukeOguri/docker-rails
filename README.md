@@ -4,6 +4,8 @@ Docker-composeを使ってRails環境を構築してみました。
 
 * Ruby version
 2.4.0
+* Heroku version
+heroku-cli/6.14.39-addc925 (darwin-x64) node-v9.2.0
 * ...
 
 
